@@ -202,6 +202,7 @@ class Barcode {
   final int bottom;
   final int left;
   final int right;
+  final String email;
 
   Barcode(
     this.displayValue, {
@@ -212,6 +213,7 @@ class Barcode {
     this.bottom: -1,
     this.left: -1,
     this.right: -1,
+        this.email: null,
   });
 
   Barcode.fromMap(Map map)
@@ -222,7 +224,8 @@ class Barcode {
         top = map['top'],
         bottom = map['bottom'],
         left = map['left'],
-        right = map['right'];
+        right = map['right'],
+  email = map['email'];
 
   Map<String, dynamic> toMap() {
     return {
@@ -234,6 +237,7 @@ class Barcode {
       'bottom': bottom,
       'left': left,
       'right': right,
+      'email': email,
     };
   }
 

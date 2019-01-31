@@ -242,6 +242,9 @@ public class FlutterMobileVisionPlugin implements MethodCallHandler,
                             ret.put("rawValue", barcode.rawValue);
                             ret.put("valueFormat", barcode.valueFormat);
                             ret.put("format", barcode.format);
+                            if(barcode.email != null){
+                                ret.put("email", barcode.email.address)
+                            }
                             ret.put("top", rect.top);
                             ret.put("bottom", rect.bottom);
                             ret.put("left", rect.left);
